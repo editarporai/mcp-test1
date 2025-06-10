@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\codigo\\Desarrollo\\MCP-Server\\ollama-mcp-bridge\\node_modules\\@modelcontextprotocol\\server-filesystem\\dist\\index.js",
+        "C:\\codigo\\Desarrollo\\frontend-mcp"
+      ],
+      "allowedDirectory": "C:\\codigo\\Desarrollo\\frontend-mcp"
+    }
+  },
+
+  "llm": {
+    "model": "MFDoom/deepseek-coder-v2-tool-calling:16b", 
+    "baseUrl": "http://localhost:11434",
+    "temperature": 0.3,
+    "maxTokens": 1000
+  },
+  "systemPrompt": "You are a coding assistant with access to tools. When the user requests an action, respond ONLY by calling the appropriate tool(s) from the provided list. Do not explain steps, only use tools."
+
+}
