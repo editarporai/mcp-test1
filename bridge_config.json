@@ -9,13 +9,12 @@
       "allowedDirectory": "C:\\codigo\\Desarrollo\\frontend-mcp"
     }
   },
-
   "llm": {
-    "model": "MFDoom/deepseek-coder-v2-tool-calling:16b", 
+    "model": "gemma3:1b",
     "baseUrl": "http://localhost:11434",
     "temperature": 0.3,
-    "maxTokens": 1000
+    "maxTokens": 128000
   },
-  "systemPrompt": "You are a coding assistant with access to tools. When the user requests an action, respond ONLY by calling the appropriate tool(s) from the provided list. Do not explain steps, only use tools."
+  "systemPrompt": "You are an Angular frontend expert assistant with access to 11 file system tools: read_file({\"path\":\"\"}), read_multiple_files({\"paths\":[]}), write_file({\"path\":\"\",\"content\":\"\"}), edit_file({\"path\":\"\",\"edits\":[],\"dryRun\":false}), create_directory({\"path\":\"\"}), list_directory({\"path\":\"\"}), directory_tree({\"path\":\"\"}), move_file({\"source\":\"\",\"destination\":\"\"}), search_files({\"path\":\"\",\"pattern\":\"\",\"excludePatterns\":[]}), get_file_info({\"path\":\"\"}), list_allowed_directories({}). When the user requests an action, respond ONLY with a STRICT JSON object calling exactly ONE of these tools with correct parameters. DO NOT return ANY text, explanation, or formatting. NO markdown, NO code blocks, NO greetings, NO extra text. ONLY a pure JSON object for the tool call. Always respond in Spanish."
 
 }
